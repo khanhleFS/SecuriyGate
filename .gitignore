@@ -1,0 +1,37 @@
+# ==========================================
+# Root .gitignore (Dự án Monorepo SecurityGate)
+# ==========================================
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment variables & Secrets (Tuyệt đối không push file .env chứa mật khẩu)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+
+# Build artifacts (được quản lý thêm ở từng subfolder)
+target/
+build/
+.next/
+out/
+node_modules/
+.dart_tool/

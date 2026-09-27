@@ -1,0 +1,13 @@
+.dart_tool/
+.idea/
+.vscode/
+.git/
+.gitignore
+build/
+android/.gradle
+android/local.properties
+ios/.symlinks/
+ios/Pods/
+*.iml
+Dockerfile*
+docker-compose*.yml

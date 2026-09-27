@@ -1,0 +1,19 @@
+# ==============================================================================
+# Dockerfile cho Flutter Web (Multi-stage build & serve qua Nginx Alpine)
+# Dùng khi dự án Mobile có phiên bản chạy Web
+# ==============================================================================
+FROM ghcr.io/cirruslabs/flutter:stable AS builder
+
+WORKDIR /app
+COPY . .
+
+RUN flutter pub get && flutter build web --release
+
+# Stage 2: Nginx Web Server siêu nhẹ
+FROM nginx:alpine
+
+COPY --from=builder /app/build/web /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
