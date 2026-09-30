@@ -39,7 +39,7 @@ services:
   # -------------------------------------------------------------
   backend:
     build:
-      context: ./Backend
+      context: ./backend
       dockerfile: Dockerfile
     container_name: sep-backend
     restart: always

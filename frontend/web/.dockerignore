@@ -1,6 +1,7 @@
 node_modules/
 .next/
 out/
+target/
 .git/
 .gitignore
 .idea/
@@ -8,7 +9,7 @@ out/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.env*.local
-README.md
+.env*
+*.md
 Dockerfile*
 docker-compose*.yml

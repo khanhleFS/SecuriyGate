@@ -1,0 +1,35 @@
+# ==============================================================================
+# Git Attributes (Chuẩn hóa Line Endings & Đánh dấu định dạng tệp)
+# ==============================================================================
+
+# Mặc định chuẩn hóa tất cả các tệp văn bản sang eol=lf (chuẩn Linux / Docker)
+* text=auto eol=lf
+
+# Riêng các tệp script Windows giữ nguyên CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Shell scripts bắt buộc phải dùng LF
+*.sh text eol=lf
+mvnw text eol=lf
+
+# Các tệp nhị phân (Binary files - Tránh bị Git can thiệp làm hỏng dữ liệu)
+*.jar binary
+*.war binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.svg text eol=lf
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.keystore binary
+*.jks binary

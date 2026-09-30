@@ -20,9 +20,15 @@ Desktop.ini
 # Environment variables & Secrets (Tuyệt đối không push file .env chứa mật khẩu)
 .env
 .env.local
-.env.*.local
+.env.*
+!.env.example
 *.pem
 *.key
+
+# Mobile Keys & Certificates (Flutter Android/iOS)
+*.keystore
+*.jks
+key.properties
 
 # Logs
 *.log

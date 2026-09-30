@@ -4,18 +4,20 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - "Backend/**"
+      - "backend/**"
+      - ".github/workflows/backend.yml"
   pull_request:
     branches: [ "main" ]
     paths:
-      - "Backend/**"
+      - "backend/**"
+      - ".github/workflows/backend.yml"
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./Backend
+        working-directory: ./backend
 
     steps:
       - name: Checkout Code
@@ -41,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: backend-jar
-          path: Backend/target/*.jar
+          path: backend/target/*.jar
           retention-days: 7
 
       - name: Set up Docker Buildx
@@ -59,6 +61,6 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: docker/build-push-action@v5
         with:
-          context: ./Backend
+          context: ./backend
           push: false # Đổi thành true khi cấu hình DockerHub Token
           tags: backend:latest
