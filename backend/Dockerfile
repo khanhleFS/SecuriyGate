@@ -32,9 +32,9 @@ USER spring:spring
 # Copy file jar từ build stage
 COPY --from=builder /app/target/*.jar app.jar
 
-# Biến môi trường mặc định
+# Biến môi trường mặc định (Tối ưu JVM theo giới hạn bộ nhớ container)
 ENV SPRING_PROFILES_ACTIVE=prod \
-    JAVA_OPTS="-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"
+    JAVA_OPTS="-XX:+UseContainerSupport -XX:InitialRAMPercentage=50.0 -XX:MaxRAMPercentage=75.0 -XX:+ExitOnOutOfMemoryError"
 
 EXPOSE 8080
 

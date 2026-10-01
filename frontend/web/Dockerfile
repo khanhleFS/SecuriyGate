@@ -22,6 +22,7 @@ COPY . .
 ARG NEXT_PUBLIC_API_URL
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 
 # Yêu cầu next.config.js cấu hình: output: 'standalone'
 RUN npm run build
@@ -36,6 +37,8 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
+# Giới hạn V8 heap trong ngưỡng 384MB để phù hợp với giới hạn 512MB của container
+ENV NODE_OPTIONS="--max-old-space-size=384"
 
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs

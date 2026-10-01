@@ -21,10 +21,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Cấu hình biến môi trường
-ENV ANDROID_SDK_ROOT=/opt/android-sdk
-ENV ANDROID_HOME=/opt/android-sdk
-ENV FLUTTER_HOME=/opt/flutter
-ENV PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$FLUTTER_HOME/bin
+ENV ANDROID_SDK_ROOT=/opt/android-sdk \
+    ANDROID_HOME=/opt/android-sdk \
+    FLUTTER_HOME=/opt/flutter \
+    PATH=$PATH:/opt/android-sdk/cmdline-tools/latest/bin:/opt/android-sdk/platform-tools:/opt/flutter/bin \
+    GRADLE_OPTS="-Dorg.gradle.jvmargs='-Xmx2560m -XX:MaxMetaspaceSize=512m' -Dorg.gradle.daemon=false"
 
 # 2. Cài đặt Android Command Line Tools & SDK
 ARG ANDROID_CMD_TOOLS_VERSION=11076708

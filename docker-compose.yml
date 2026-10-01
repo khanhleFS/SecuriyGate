@@ -8,6 +8,7 @@ services:
     image: postgres:16-alpine
     container_name: sep-postgres
     restart: always
+    shm_size: 256mb
     environment:
       POSTGRES_DB: securitygate_db
       POSTGRES_USER: postgres
@@ -21,6 +22,18 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1024M
+        reservations:
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   # -------------------------------------------------------------
   # Redis (Tùy chọn: Dùng lưu Blacklist JWT / Session / Cache)
@@ -29,10 +42,23 @@ services:
     image: redis:7-alpine
     container_name: sep-redis
     restart: always
+    command: redis-server --maxmemory 200mb --maxmemory-policy allkeys-lru
     ports:
       - "6379:6379"
     volumes:
       - redis_data:/data
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   # -------------------------------------------------------------
   # Backend Spring Boot App
@@ -53,6 +79,42 @@ services:
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
     ports:
       - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 1024M
+        reservations:
+          memory: 512M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # -------------------------------------------------------------
+  # Frontend Web (Next.js Standalone Runner)
+  # -------------------------------------------------------------
+  web:
+    build:
+      context: ./frontend/web
+      dockerfile: Dockerfile
+    container_name: sep-web
+    restart: always
+    ports:
+      - "3000:3000"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 volumes:
   postgres_data:
