@@ -11,19 +11,25 @@ SEP/
 ├── .github/
 │   ├── workflows/
 │   │   ├── backend.yml       # CI/CD cho Java Spring Boot
-│   │   ├── frontend.yml      # CI/CD cho Next.js (frontend/web)
-│   │   └── mobile.yml        # CI/CD cho Flutter (frontend/mobile)
+│   │   ├── frontend.yml      # CI/CD cho Frontend Monorepo (Turborepo/Next.js)
+│   │   └── mobile.yml        # CI/CD cho Flutter (apps/mobile)
 │   └── dependabot.yml        # Tự động quét cập nhật bảo mật hằng tuần
 ├── backend/                  # API Server (Java 21, Spring Boot, PostgreSQL, Redis)
-├── frontend/
-│   ├── web/                  # Ứng dụng Web quản trị (Next.js, Node.js 22)
-│   └── mobile/               # Ứng dụng di động (Flutter 3.24)
+├── frontend/                 # Frontend Monorepo (Turborepo)
+│   ├── package.json          # Root npm workspaces
+│   ├── turbo.json            # Cấu hình pipeline Turborepo
+│   ├── apps/
+│   │   ├── web/              # Ứng dụng Web quản trị (Next.js 14, Node.js 22)
+│   │   └── mobile/           # Ứng dụng di động (Flutter 3.24)
+│   └── packages/             # Shared packages (@repo/ui, @repo/eslint-config, @repo/typescript-config)
+├── iot/                      # Hệ thống IoT & Edge Gateway Controller (Python, MQTT, RTSP, Relay)
+├── research/                 # Nghiên cứu AI & Tối ưu hóa mô hình biên (ALPR, YOLO, ONNX, INT8 Benchmark)
 ├── deploy/                   # Chứa cấu hình triển khai Production (Nginx, SSL, K8s)
 ├── .editorconfig             # Quy chuẩn định dạng mã nguồn nhất quán
 ├── .env.example              # Mẫu biến môi trường an toàn (không chứa secret)
 ├── .gitattributes            # Chuẩn hóa ký tự kết thúc dòng (LF/CRLF)
 ├── .gitignore                # Danh sách loại trừ tệp nhạy cảm và build artifact
-├── docker-compose.yml        # Cấu hình cụm dịch vụ Local / Testing (DB, Redis, Backend)
+├── docker-compose.yml        # Cấu hình cụm dịch vụ Local / Testing (DB, Redis, Backend, Web)
 └── README.md                 # Tài liệu hướng dẫn phát triển
 ```
 
@@ -32,7 +38,8 @@ SEP/
 ## 💻 Yêu Cầu Cài Đặt (Prerequisites)
 
 - **Java Development Kit (JDK):** Version 21 (Temurin hoặc OpenJDK)
-- **Node.js & npm:** Node.js 22 LTS
+- **Node.js & npm:** Node.js 22 LTS (kèm npm 10+)
+- **Python:** Version 3.10 / 3.11 (phục vụ `research/` và `iot/`)
 - **Flutter SDK:** Version 3.24.x (kèm Android SDK 34 / Java 17)
 - **Docker & Docker Compose:** Docker Desktop hoặc Docker Engine 24+
 
@@ -48,7 +55,7 @@ docker compose up -d postgres redis
 - PostgreSQL: `localhost:5432` (DB: `securitygate_db`, User: `postgres`, Password: `password123`)
 - Redis: `localhost:6379`
 
-Hoặc chạy toàn bộ bao gồm cả container Backend:
+Hoặc chạy toàn bộ bao gồm cả container Backend & Web:
 ```bash
 docker compose up -d --build
 ```
@@ -74,11 +81,15 @@ cd backend
 
 ---
 
-### 3. Chạy Frontend Web (Next.js)
+### 3. Chạy Frontend Monorepo (Turborepo)
 ```bash
-cd frontend/web
+cd frontend
+
+# Cài đặt toàn bộ dependencies trong monorepo
 npm install
-npm run dev
+
+# Chạy dev server cho toàn bộ hoặc riêng Web:
+npm run dev --filter=web
 ```
 - Web Application: `http://localhost:3000`
 
@@ -86,9 +97,22 @@ npm run dev
 
 ### 4. Chạy Frontend Mobile (Flutter)
 ```bash
-cd frontend/mobile
+cd frontend/apps/mobile
 flutter pub get
 flutter run
+```
+
+---
+
+### 5. Chạy IoT Edge Gateway & Nghiên Cứu AI
+```bash
+# Khởi chạy Edge Gateway
+cd iot
+docker compose -f docker-compose.edge.yml up -d
+
+# Chạy benchmark mô hình AI trên edge
+cd ../research/evaluation
+python benchmark_edge.py --model ../models/plate_detect.onnx
 ```
 
 ---
@@ -116,6 +140,6 @@ Hệ thống tự động hóa kích hoạt kiểm thử dựa trên đường d
 | Workflow | File Cấu Hình | Điều Kiện Kích Hoạt | Công Việc Thực Hiện |
 | :--- | :--- | :--- | :--- |
 | **Backend CI/CD** | `.github/workflows/backend.yml` | Đổi file trong `backend/**` | Test (`mvn test`), Package JAR, Build Docker Image |
-| **Frontend CI/CD** | `.github/workflows/frontend.yml` | Đổi file trong `frontend/web/**` | Cài đặt dependencies, Lint mã nguồn, Build Next.js |
-| **Mobile CI/CD** | `.github/workflows/mobile.yml` | Đổi file trong `frontend/mobile/**` | Static analyze, Unit Test, Build Release APK |
+| **Frontend CI/CD** | `.github/workflows/frontend.yml` | Đổi file trong `frontend/**` (trừ mobile) | Cài đặt npm monorepo, Lint Turborepo, Build Next.js |
+| **Mobile CI/CD** | `.github/workflows/mobile.yml` | Đổi file trong `frontend/apps/mobile/**` | Static analyze, Unit Test, Build Release APK |
 | **Dependabot** | `.github/dependabot.yml` | Lịch trình hằng tuần | Tự động quét và đề xuất cập nhật bảo mật thư viện |

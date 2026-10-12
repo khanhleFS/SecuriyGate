@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # ==============================================================
+  # Local MQTT Broker (Mosquitto)
+  # Nhận và phát tin nhắn giữa các module phần cứng và Gateway
+  # ==============================================================
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    container_name: sep-edge-mqtt
+    restart: always
+    ports:
+      - "1883:1883"
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ==============================================================
+  # Edge Gateway Controller
+  # Quản lý giao tiếp camera RTSP, RFID, Relay Barrier
+  # ==============================================================
+  edge-gateway:
+    build:
+      context: ./edge-gateway
+      dockerfile: Dockerfile
+    container_name: sep-edge-gateway
+    restart: always
+    privileged: true # Cần quyền privileged để tương tác với GPIO / Serial / USB trên Raspberry Pi
+    depends_on:
+      - mosquitto
+    volumes:
+      - /dev:/dev # Truy cập thiết bị ngoại vi USB / Serial / GPIO
+      - ./edge-gateway/config:/app/config:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - GATE_ID=GATE_LANE_01
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

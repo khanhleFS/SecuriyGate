@@ -1,0 +1,22 @@
+{
+  "name": "securitygate-frontend-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend monorepo for SecurityGate Access Control System managed by Turborepo",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.2",
+    "prettier": "^3.3.3"
+  },
+  "packageManager": "npm@10.8.2"
+}

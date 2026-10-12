@@ -37,7 +37,22 @@ logs/
 # Build artifacts (được quản lý thêm ở từng subfolder)
 target/
 build/
+dist/
 .next/
 out/
 node_modules/
 .dart_tool/
+.turbo/
+
+# Python & AI Research
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.pt
+*.onnx
+*.engine
+*.tflite
+*.weights
+

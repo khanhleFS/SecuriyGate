@@ -1,0 +1,29 @@
+gate:
+  id: "GATE_LANE_01"
+  name: "Cổng kiểm soát xe vào - Làn A"
+  type: "IN" # "IN" hoặc "OUT"
+
+mqtt:
+  broker: "localhost"
+  port: 1883
+  keepalive: 60
+  topics:
+    access_request: "gate/GATE_LANE_01/access_request"
+    barrier_command: "gate/GATE_LANE_01/command/barrier"
+    status_heartbeat: "gate/GATE_LANE_01/status"
+
+backend:
+  base_url: "http://localhost:8080"
+  timeout_seconds: 5
+
+camera:
+  front_plate_rtsp: "rtsp://admin:password@192.168.1.101:554/stream1"
+  driver_face_rtsp: "rtsp://admin:password@192.168.1.102:554/stream1"
+  snapshot_timeout_ms: 800
+
+gpio:
+  barrier_open_pin: 17
+  barrier_close_pin: 27
+  safety_sensor_pin: 22
+  rfid_serial_port: "/dev/ttyUSB0"
+  rfid_baud_rate: 9600

@@ -1,0 +1,16 @@
+# MQTT & Network Communications
+paho-mqtt>=2.0.0
+requests>=2.31.0
+websockets>=12.0
+
+# Hardware & Serial
+pyserial>=3.5
+# RPi.GPIO>=0.7.1 # Bật khi chạy trực tiếp trên Raspberry Pi OS
+
+# Computer Vision & Image Handling
+opencv-python-headless>=4.9.0
+pillow>=10.2.0
+numpy>=1.26.0
+
+# Config & Utilities
+pyyaml>=6.0.1

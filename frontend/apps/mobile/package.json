@@ -1,0 +1,13 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flutter Client Mobile Application for SecurityGate System",
+  "scripts": {
+    "dev": "flutter run",
+    "build": "flutter build apk --release --split-per-abi",
+    "build:web": "flutter build web --release",
+    "lint": "flutter analyze",
+    "test": "flutter test"
+  }
+}

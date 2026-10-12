@@ -12,15 +12,15 @@ updates:
     schedule:
       interval: "weekly"
 
-  # Cập nhật thư viện npm cho Frontend Web (Next.js)
+  # Cập nhật thư viện npm cho Frontend Monorepo (Turborepo)
   - package-ecosystem: "npm"
-    directory: "/frontend/web"
+    directory: "/frontend"
     schedule:
       interval: "weekly"
 
   # Cập nhật thư viện pub cho Frontend Mobile (Flutter/Dart)
   - package-ecosystem: "pub"
-    directory: "/frontend/mobile"
+    directory: "/frontend/apps/mobile"
     schedule:
       interval: "weekly"
 
@@ -32,12 +32,18 @@ updates:
 
   # Quét base image Dockerfile cho Frontend Web
   - package-ecosystem: "docker"
-    directory: "/frontend/web"
+    directory: "/frontend/apps/web"
     schedule:
       interval: "weekly"
 
   # Quét base image Dockerfile cho Frontend Mobile
   - package-ecosystem: "docker"
-    directory: "/frontend/mobile"
+    directory: "/frontend/apps/mobile"
+    schedule:
+      interval: "weekly"
+
+  # Quét base image Dockerfile cho IoT Edge Gateway
+  - package-ecosystem: "docker"
+    directory: "/iot/edge-gateway"
     schedule:
       interval: "weekly"

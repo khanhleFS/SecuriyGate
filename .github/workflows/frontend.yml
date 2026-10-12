@@ -1,15 +1,17 @@
-name: Frontend CI/CD (Next.js)
+name: Frontend Monorepo CI/CD (Turborepo)
 
 on:
   push:
     branches: [ "main" ]
     paths:
-      - "frontend/web/**"
+      - "frontend/**"
+      - "!frontend/apps/mobile/**"
       - ".github/workflows/frontend.yml"
   pull_request:
     branches: [ "main" ]
     paths:
-      - "frontend/web/**"
+      - "frontend/**"
+      - "!frontend/apps/mobile/**"
       - ".github/workflows/frontend.yml"
 
 jobs:
@@ -17,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./frontend/web
+        working-directory: ./frontend
 
     steps:
       - name: Checkout Code
@@ -27,20 +29,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
-          cache-dependency-path: frontend/web/package-lock.json
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Lint Code
+      - name: Lint Monorepo
         run: npm run lint
 
       # Mở comment khi dự án có viết unit test
       # - name: Run Tests
-      #   run: npm run test -- --passWithNoTests
+      #   run: npm run test
 
-      - name: Build Next.js
+      - name: Build Web Application
         env:
           NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL || 'http://localhost:8080' }}
-        run: npm run build
+        run: npm run build -- --filter=web
