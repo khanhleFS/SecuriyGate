@@ -18,7 +18,7 @@ graph TD
 ### 📑 Danh Sách Tài Liệu Chi Tiết:
 
 | Tài Liệu | Nội Dung Cốt Lõi | Kết Quả Chính Đạt Được |
-| :--- | :--- | :--- |
+| **[Context & Baseline Paper Foundation](context.md)** | Phân tích bài báo nền tảng Paper 23, định vị nghiên cứu, ma trận đối chứng và hướng dẫn trích dẫn khoa học. | Nền tảng lý thuyết & thực nghiệm để chấp bút bài báo khoa học. |
 | **[Phase 1: Baseline & Refactoring](phase_1_baseline_and_refactoring.md)** | Tái cấu trúc codebase cũ thành thư viện dạng module Two-Stage độc lập. | Đo đạc độ trễ PyTorch gốc, phụ thuộc nặng ~1.5GB, RAM ~331MB. |
 | **[Phase 2: Nén Mô Hình (Pruning & Quantization)](phase_2_model_compression_quantization.md)** | Chuyển đổi PyTorch ➔ ONNX opset 18, Dynamic Quantization INT8, L1 Pruning 25%. | **Giảm 72.6% dung lượng** (11.7MB ➔ 3.2MB), **RAM giảm 83.8%** (53MB), giữ nguyên 92.2% độ tin cậy. |
 | **[Phase 3: Giả Lập RPi & Stress-Test](phase_3_docker_rpi_simulation_stresstest.md)** | Tạo container Docker Debian Bookworm siêu nhẹ (<350MB), stress-test từ Pi 4 xuống Pi 256MB RAM. | Sống sót không bị OOM ngay cả ở **256MB RAM**; phát hiện nút thắt chuyển từ RAM sang **Compute-Bound** (OCR chậm). |
