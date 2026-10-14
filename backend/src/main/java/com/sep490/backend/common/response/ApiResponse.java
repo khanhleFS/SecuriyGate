@@ -1,4 +1,4 @@
-package com.sep490.backend.common.reponse;
+package com.sep490.backend.common.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.Map;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResponse<T> {
     @Builder.Default
-    private int code = 500;
+    private int code = 200;
 
     private String message;
     private T result;
