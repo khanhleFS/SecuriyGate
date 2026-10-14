@@ -14,6 +14,7 @@ graph LR
     P2 --> P3[Phase 3: Giả Lập Docker Pi]
     P3 --> P4[Phase 4: Resolution & SIMD]
     P4 --> P5[Phase 5: Đột Phá OCR ROI]
+    P5 --> P6[Phase 6: Robustness & Data]
 ```
 
 ### 📑 Chi Tiết Từng Giai Đoạn (Bấm Vào Để Xem):
@@ -32,6 +33,9 @@ graph LR
 5. **[Phase 5: Đột Phá Tầng OCR (ROI Downscale & Tinh Giản DBNet)](doc/phase_5_ocr_roi_and_preprocessing.md)**
    - Tìm ra lỗi tự động upscale 736 của RapidOCR, chuẩn hóa ROI height $H=96$, tinh giản DBNet no-dilation.
    - **Kết quả:** **OCR tăng tốc 5.85x** (từ 3.32s xuống 0.56s trên Pi 4). Toàn bộ pipeline đạt **~668ms (~1.5 FPS)**!
+6. **[Phase 6: Khung Đánh Giá Robustness & Chuẩn Bị Dữ Liệu Kiểm Thử](doc/phase_6_robustness_benchmark_and_data_preparation.md)**
+   - Thiết lập chiến lược dữ liệu 2 nguồn (Source A chuẩn hóa sinh nhiễu vs Source B ảnh thật đối chứng).
+   - Xây dựng ma trận 4 nhóm nhiễu (Ánh sáng, Mờ, Thời tiết, Hình học), hệ thống chỉ số mAP, EM, CER và phân rã task 5 người.
 
 ---
 
