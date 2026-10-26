@@ -1,4 +1,4 @@
-package com.sep490.backend.dto.authen;
+package com.sep490.backend.dto.user;
 
 import com.sep490.backend.entity.Enumeration.UserRole;
 import io.swagger.v3.oas.annotations.media.Schema;

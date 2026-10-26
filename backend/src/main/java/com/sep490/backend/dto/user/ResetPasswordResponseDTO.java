@@ -1,4 +1,4 @@
-package com.sep490.backend.dto.authen;
+package com.sep490.backend.dto.user;
 
 import java.util.UUID;
 

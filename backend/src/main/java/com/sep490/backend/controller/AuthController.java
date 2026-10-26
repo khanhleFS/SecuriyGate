@@ -4,6 +4,7 @@ import com.sep490.backend.common.response.ApiResponse;
 import com.sep490.backend.common.util.SecurityUtils;
 import com.sep490.backend.controller.api.AuthAPI;
 import com.sep490.backend.dto.authen.*;
+import com.sep490.backend.dto.user.*;
 import com.sep490.backend.service.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
