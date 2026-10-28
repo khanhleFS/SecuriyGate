@@ -1,6 +1,6 @@
 package com.sep490.backend.common.security;
 
-import com.sep490.backend.entity.User;
+import com.sep490.backend.modules.user.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;

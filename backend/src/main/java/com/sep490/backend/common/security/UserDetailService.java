@@ -1,6 +1,6 @@
 package com.sep490.backend.common.security;
 
-import com.sep490.backend.repository.UserRepository;
+import com.sep490.backend.modules.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

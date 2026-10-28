@@ -1,7 +1,7 @@
 package com.sep490.backend.common.util;
 
 import com.sep490.backend.common.security.CustomUserDetail;
-import com.sep490.backend.entity.User;
+import com.sep490.backend.modules.user.entity.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

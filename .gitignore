@@ -56,3 +56,6 @@ venv/
 *.tflite
 *.weights
 
+# Temporary & Cache files
+tmp/
+/tmp/
