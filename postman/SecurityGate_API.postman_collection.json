@@ -84,6 +84,35 @@
           "response": []
         },
         {
+          "name": "1.2.1 Gửi lại OTP kích hoạt (Resend Register OTP)",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/resend-register-otp?email={{test_email}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "resend-register-otp"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "{{test_email}}"
+                }
+              ]
+            },
+            "description": "Gửi lại mã OTP 6 số mới đến email khi mã OTP cũ hết hạn hoặc chưa nhận được."
+          },
+          "response": []
+        },
+        {
           "name": "1.3 Đăng nhập (Login - Auto Save Token)",
           "event": [
             {
@@ -210,13 +239,13 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/auth/profile",
+              "raw": "{{baseUrl}}/api/users/profile",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
-                "auth",
+                "users",
                 "profile"
               ]
             },
@@ -225,9 +254,9 @@
           "response": []
         },
         {
-          "name": "2.2 Cập nhật thông tin cá nhân (Update Profile)",
+          "name": "2.2 Cập nhật thông tin cá nhân (Update Profile - PATCH)",
           "request": {
-            "method": "PUT",
+            "method": "PATCH",
             "header": [
               {
                 "key": "Content-Type",
@@ -236,20 +265,20 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"fullName\": \"Nguyen Van A Updated\",\n  \"email\": \"{{test_email}}\",\n  \"phone\": \"0912345678\",\n  \"address\": \"456 Le Loi, Quan 1, TP.HCM\"\n}"
+              "raw": "{\n  \"fullName\": \"Nguyen Van A Updated\",\n  \"address\": \"456 Le Loi, Quan 1, TP.HCM\"\n}"
             },
             "url": {
-              "raw": "{{baseUrl}}/api/auth/profile",
+              "raw": "{{baseUrl}}/api/users/profile",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
-                "auth",
+                "users",
                 "profile"
               ]
             },
-            "description": "Cập nhật họ tên, email, phone, địa chỉ của user đang đăng nhập."
+            "description": "Cập nhật từng phần (PATCH) thông tin của user đang đăng nhập (chỉ cập nhật các trường được gửi lên, không ghi đè mất thông tin cũ)."
           },
           "response": []
         },
@@ -259,13 +288,13 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/auth/reset-password/send-otp",
+              "raw": "{{baseUrl}}/api/users/reset-password/send-otp",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
-                "auth",
+                "users",
                 "reset-password",
                 "send-otp"
               ]
@@ -289,13 +318,13 @@
               "raw": "{\n  \"email\": \"{{test_email}}\",\n  \"oldPassword\": \"{{test_password}}\",\n  \"newPassword\": \"NewPassword123@\",\n  \"confirmPassword\": \"NewPassword123@\",\n  \"otpCode\": \"{{test_otp}}\"\n}"
             },
             "url": {
-              "raw": "{{baseUrl}}/api/auth/reset-password",
+              "raw": "{{baseUrl}}/api/users/reset-password",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "api",
-                "auth",
+                "users",
                 "reset-password"
               ]
             },
