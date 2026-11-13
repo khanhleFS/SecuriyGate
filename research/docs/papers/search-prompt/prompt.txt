@@ -1,0 +1,60 @@
+Hãy đóng vai một nhà nghiên cứu khoa học máy tính và hệ thống IoT giàu kinh nghiệm. Nhiệm vụ của bạn là tìm kiếm, chọn lọc và tổng hợp **5 đến 8 bài báo khoa học uy tín** (xuất bản từ **2021 đến nay**, ưu tiên hội nghị/tạp chí thuộc IEEE, ACM, Springer, Elsevier/ScienceDirect, hoặc danh mục Scopus/WoS Q1–Q3; chấp nhận bản arXiv kèm thông tin hội nghị/tạp chí nếu là công trình đã công bố hoặc của nhóm nghiên cứu uy tín).
+
+### 1. Chủ đề & Phạm vi tìm kiếm
+Tìm các nghiên cứu về **hệ thống IoT đa phương thức (Multimodal IoT / Smart Environment)** có kết hợp **nhiều camera / camera đa góc nhìn (multi-view / distributed cameras / omnidirectional camera)** và **microphone / mảng micro (distributed microphones / microphone array)**, có thể kèm theo các cảm biến IoT khác (mmWave radar, ánh sáng, nhiệt độ, độ ẩm, cảm biến chuyển động/áp suất).
+
+Ưu tiên đặc biệt các bài có đóng góp rõ ở **một hoặc cả hai khía cạnh** sau:
+1. **Quy trình thu thập dữ liệu & Đồng bộ hóa:** Cách bố trí không gian cảm biến, thông số phần cứng (FPS, sample rate), cơ chế đồng bộ thời gian (timestamp alignment / synchronization) giữa camera–micro–cảm biến IoT tần số thấp, và phương pháp gán nhãn dữ liệu.
+2. **Hợp nhất dữ liệu đa phương thức (Multimodal & Multi-view Fusion):** Nhận diện sự kiện/hành vi con người (event detection, human activity recognition), xử lý góc khuất (occlusion), nhiễu nền hoặc mất cảm biến (sensor dropout).
+
+**Từ khóa gợi ý để bạn tự mở rộng truy vấn tìm kiếm (tiếng Anh):**
+- `"distributed camera" "microphone" "event detection" OR "activity recognition"`
+- `"multi-view" "audio-visual" "IoT" OR "smart home" dataset synchronization`
+- `"multimodal sensor network" "camera" "microphone" "radar" OR "environmental sensors" data collection`
+- `"sensor fusion" "multi-camera" "microphone array" time synchronization`
+
+### 2. Danh sách bài đã có (BỎ QUA, không liệt kê lại)
+**Đợt 1:**
+- Guided-MELD (Yasuda et al., 2024, arXiv:2404.08264)
+- MLMC-AVE (Zheng et al., CVPRW 2023)
+- MISP 2023 Challenge (Wu et al., ICASSP 2024)
+- Seeing With Sound (Chakravarthula et al., 2023)
+- Multi-channel Sensor Network Construction, Data Fusion and Challenges for Smart Home (Zhang et al., ACM Chinese CHI 2023)
+
+**Đợt 2:**
+- Multi-view and Multi-modal Event Detection Utilizing Transformer-based Multi-sensor Fusion / MultiTrans (Yasuda et al., ICASSP 2022, arXiv:2202.09124)
+- The First Multimodal Information Based Speech Processing (MISP) Challenge: Data, Tasks, Baselines and Results (Chen et al., ICASSP 2022)
+- STARSS23: An Audio-Visual Dataset of Spatial Recordings of Real Scenes with Spatiotemporal Annotations of Sound Events (Shimada et al., NeurIPS 2023)
+- MultiSensor-Home: A Wide-area Multi-modal Multi-view Dataset for Action Recognition and Transformer-based Sensor Fusion (Nguyen et al., IEEE FG 2025, arXiv:2504.02287)
+- STNet: Deep Audio–Visual Fusion Network for Robust Speaker Tracking (Li et al., IEEE TMM 2025, arXiv:2410.05964)
+
+**Đợt 3:**
+- Design and Deployment of a Multi-Modal Multi-Node Sensor Data Collection Platform (Fang et al., ACM DATA '22 / SenSys '22, DOI: 10.1145/3560905.3567770)
+- Audio-Visual Tracking of Concurrent Speakers / AV3T-VDM (Qian et al., IEEE TMM 2022, DOI: 10.1109/TMM.2021.3061800)
+- Audiovisual Tracking of Multiple Speakers in Smart Spaces / GAVT (Sanabria-Macias et al., MDPI Sensors 2023, DOI: 10.3390/s23156969)
+- RAV4D: A Radar-Audio-Visual Dataset for Indoor Multi-Person Tracking (Zhou et al., IEEE RadarConf 2024, DOI: 10.1109/RadarConf2458775.2024.10549701)
+- Sound3DVDet: 3D Sound Source Detection Using Multiview Microphone Array and RGB Images (He et al., IEEE/CVF WACV 2024, DOI: 10.1109/WACV57701.2024.00541)
+- GDTM: An Indoor Geospatial Tracking Dataset with Distributed Multimodal Sensors (Jeong et al., 2024, arXiv:2402.14136)
+- Improved Simulation of Realistically-Spatialised Simultaneous Speech Using Multi-Camera Analysis in the CHiME-5 Dataset (Deadman & Barker, IEEE ICASSP 2022, DOI: 10.1109/ICASSP43922.2022.9746351)
+
+*(Nếu muốn lọc thêm bài khác, bổ sung tên bài vào danh sách trên trước khi chạy prompt.)*
+
+### 3. Quy tắc chống bịa đặt (Bắt buộc)
+- **Chỉ chọn bài thực sự tìm thấy và kiểm chứng được thông tin xuất bản** (tên bài, tác giả, năm, hội nghị/tạp chí, DOI hoặc URL hợp lệ).
+- **Ưu tiên bài có bản toàn văn (Open Access / arXiv PDF / GitHub kèm paper)** để trích xuất chính xác số liệu. Nếu một bài chỉ đọc được Abstract/Metadata do bị khóa paywall, **phải ghi chú rõ `[Chỉ dựa trên Abstract]`** và tuyệt đối không tự suy diễn thông số kỹ thuật hay chỉ số thực nghiệm.
+- Không bịa số liệu, không gộp nhầm kết quả giữa các tập dữ liệu khác nhau, và **không chèn ảnh minh họa từ nguồn web khác** không phải của bài báo gốc.
+
+### 4. Cấu trúc trình bày cho từng bài báo
+Với mỗi bài báo, hãy trình bày ngắn gọn, súc tích theo đúng 6 mục sau để phục vụ viết *Literature Review* và tham khảo thiết kế *Data Collection*:
+
+1. **Thông tin xuất bản:** Tên bài báo, Tác giả, Năm, Tạp chí/Hội nghị (kèm xếp hạng/nhà xuất bản nếu có), DOI hoặc Link PDF gốc.
+2. **Vấn đề cốt lõi (Problem Statement):** Bài toán thực tế và hạn chế của các nghiên cứu trước đó mà bài báo giải quyết.
+3. **Thiết lập Phần cứng, Dữ liệu & Đồng bộ (Dataset & Setup):** Số lượng/loại camera, micro và cảm biến IoT khác (nếu có); cách bố trí không gian; thông số thu thập; phương pháp đồng bộ thời gian và gán nhãn *(ghi rõ "Không công bố chi tiết" nếu bài không nêu)*.
+4. **Phương pháp đề xuất (Methodology):** Kiến trúc mô hình, thuật toán hợp nhất đa phương thức/đa góc nhìn hoặc quy trình xử lý dữ liệu.
+5. **Kết quả nổi bật (Results):** Các chỉ số định lượng cụ thể (mAP, Accuracy, F1, CER, độ trễ đồng bộ...) kèm tên bộ dữ liệu thử nghiệm và baseline so sánh.
+6. **Khoảng trống nghiên cứu (Research Gap):** Hạn chế tác giả tự thừa nhận hoặc điểm chưa giải quyết triệt để (chi phí phần cứng, khả năng mở rộng đa phòng, điều kiện thiếu sáng/nhiễu, tính tổng quát...).
+
+### 5. Tổng hợp cuối bài
+Sau khi liệt kê các bài, hãy tạo thêm:
+- **1 bảng so sánh tổng hợp** gồm các cột: `Bài báo (Năm)` | `Loại cảm biến & Số lượng` | `Cơ chế đồng bộ / Gán nhãn` | `Phương pháp Fusion` | `Dataset & Kết quả chính` | `Hạn chế chính`.
+- **Nhận xét nhanh:** Chỉ ra 2–3 bài phù hợp nhất để tham khảo cho việc **thiết kế thu thập dữ liệu thực nghiệm** (bố trí Camera + Micro + cảm biến IoT).
