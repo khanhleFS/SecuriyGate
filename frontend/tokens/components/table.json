@@ -1,0 +1,10 @@
+{
+  "table": {
+    "header-bg": { "value": "{surface.muted}", "type": "color", "description": "Nền tiêu đề cột bảng dữ liệu" },
+    "header-fg": { "value": "{text.primary}", "type": "color", "description": "Chữ tiêu đề cột bảng dữ liệu" },
+    "row-bg": { "value": "{surface.default}", "type": "color", "description": "Nền mặc định của từng dòng dữ liệu" },
+    "row-hover-bg": { "value": "{surface.canvas}", "type": "color", "description": "Nền dòng bảng khi di chuột qua" },
+    "border": { "value": "{border.subtle}", "type": "color", "description": "Đường kẻ phân tách giữa các dòng bảng" },
+    "radius": { "value": "{borderRadius.sm}", "type": "borderRadius", "description": "Bo góc khung bao bảng" }
+  }
+}

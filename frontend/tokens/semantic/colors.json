@@ -1,0 +1,40 @@
+{
+    "brand": {
+        "primary": { "value": "{teal.500}", "dark": "{teal.400}", "type": "color", "description": "Màu thương hiệu chính THEN-CHOT (#0E7C6B - CTA button, thanh điều hướng, logo, điểm nhấn chủ đạo)" },
+        "primary-hover": { "value": "{teal.700}", "dark": "{teal.300}", "type": "color", "description": "Trạng thái hover/active của nút hoặc liên kết chính" },
+        "primary-subtle": { "value": "{teal.100}", "dark": "{teal.900}", "type": "color", "description": "Nền nhấn nhẹ theo màu thương hiệu chính (badge, trạng thái active, highlight)" },
+        "accent": { "value": "{amber.500}", "dark": "{amber.500}", "type": "color", "description": "Màu nhấn phụ (#E8A33D - thanh chắn cổng, secondary badge, icon trang trí, highlight)" },
+        "accent-hover": { "value": "{amber.600}", "dark": "{amber.300}", "type": "color", "description": "Trạng thái hover/active của thành phần dùng màu accent (đảm bảo contrast >5.1:1 với text.on-accent)" },
+        "accent-subtle": { "value": "{amber.100}", "dark": "{amber.900}", "type": "color", "description": "Nền nhấn nhẹ theo màu vàng hổ phách phụ (callout, note box)" }
+    },
+    "surface": {
+        "canvas": { "value": "{neutral.50}", "dark": "{neutral.950}", "type": "color", "description": "Nền tổng thể của trang (#F8F7FA ở chế độ sáng, #1A191B ở chế độ tối)" },
+        "default": { "value": "{neutral.0}", "dark": "{neutral.900}", "type": "color", "description": "Nền mặc định của các khối nổi trên trang (card, modal, dropdown)" },
+        "muted": { "value": "{neutral.100}", "dark": "{neutral.800}", "type": "color", "description": "Nền phụ hoặc trạng thái hover nhẹ (sidebar, code block, table row hover)" },
+        "inverse": { "value": "{neutral.900}", "dark": "{neutral.50}", "type": "color", "description": "Nền đảo ngược tương phản cao (tooltip, khối tối/sáng đảo chiều)" }
+    },
+    "text": {
+        "primary": { "value": "{neutral.900}", "dark": "{neutral.50}", "type": "color", "description": "Chữ tiêu đề và nội dung quan trọng nhất" },
+        "body": { "value": "{neutral.700}", "dark": "{neutral.300}", "type": "color", "description": "Chữ đoạn văn đọc chính (paragraphs, nội dung mô tả)" },
+        "muted": { "value": "{neutral.500}", "dark": "{neutral.400}", "type": "color", "description": "Chữ phụ (caption, ngày tháng, placeholder, thông tin bổ trợ)" },
+        "inverse": { "value": "{neutral.0}", "dark": "{neutral.900}", "type": "color", "description": "Chữ đảo ngược đặt trên nền surface.inverse" },
+        "on-brand": { "value": "{neutral.0}", "dark": "{neutral.950}", "type": "color", "description": "Chữ/icon đặt trên nền brand.primary hoặc brand.primary-hover (đạt chuẩn WCAG AA)" },
+        "on-accent": { "value": "{neutral.900}", "dark": "{neutral.950}", "type": "color", "description": "Chữ/icon tối đặt trên nền brand.accent hoặc brand.accent-hover (đạt chuẩn WCAG AA)" },
+        "brand": { "value": "{teal.700}", "dark": "{teal.300}", "type": "color", "description": "Chữ nhấn màu thương hiệu trên nền sáng/tối hoặc brand.primary-subtle" }
+    },
+    "border": {
+        "subtle": { "value": "{neutral.200}", "dark": "{neutral.800}", "type": "color", "description": "Viền mảnh phân tách nhẹ (card border, divider)" },
+        "default": { "value": "{neutral.300}", "dark": "{neutral.700}", "type": "color", "description": "Viền thành phần tương tác (input, select, button outline)" },
+        "focus": { "value": "{teal.500}", "dark": "{teal.300}", "type": "color", "description": "Viền khi đang focus hoặc trạng thái được chọn (active/focus ring)" }
+    },
+    "status": {
+        "success-bg": { "value": "{green.100}", "dark": "{green.900}", "type": "color", "description": "Nền tag/alert trạng thái thành công hoặc đang hoạt động" },
+        "success-fg": { "value": "{green.700}", "dark": "{green.300}", "type": "color", "description": "Chữ và icon trạng thái thành công" },
+        "danger-bg": { "value": "{red.100}", "dark": "{red.900}", "type": "color", "description": "Nền tag/alert trạng thái lỗi, nguy hiểm hoặc từ chối truy cập" },
+        "danger-fg": { "value": "{red.700}", "dark": "{red.300}", "type": "color", "description": "Chữ và icon trạng thái lỗi hoặc cảnh báo đỏ" },
+        "info-bg": { "value": "{blue.100}", "dark": "{blue.900}", "type": "color", "description": "Nền tag/alert thông tin hướng dẫn hoặc ghi chú" },
+        "info-fg": { "value": "{blue.700}", "dark": "{blue.300}", "type": "color", "description": "Chữ và icon trạng thái thông tin" },
+        "warning-bg": { "value": "{amber.100}", "dark": "{amber.900}", "type": "color", "description": "Nền tag/alert cảnh báo nhẹ hoặc chờ xử lý (pending)" },
+        "warning-fg": { "value": "{amber.700}", "dark": "{amber.300}", "type": "color", "description": "Chữ và icon trạng thái cảnh báo hoặc chờ xử lý (đạt chuẩn WCAG AA trên warning-bg)" }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "card": {
+    "bg": { "value": "{surface.default}", "type": "color", "description": "Nền khối card chính" },
+    "bg-subtle": { "value": "{surface.canvas}", "type": "color", "description": "Nền card lồng hoặc hộp điều khiển phụ" },
+    "border": { "value": "{border.subtle}", "type": "color", "description": "Viền mảnh phân tách card" },
+    "accent-top": { "value": "{brand.accent}", "type": "color", "description": "Thanh nhấn màu vàng hổ phách cho card nổi bật" },
+    "accent-primary": { "value": "{brand.primary}", "type": "color", "description": "Thanh nhấn màu thương hiệu chính cho panel chính" },
+    "radius": { "value": "{borderRadius.md}", "type": "borderRadius", "description": "Bo góc chuẩn của card" },
+    "padding": { "value": "{space.6}", "type": "space", "description": "Khoảng đệm nội dung trong card" }
+  }
+}

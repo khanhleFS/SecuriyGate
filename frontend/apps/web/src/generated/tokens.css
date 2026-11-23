@@ -1,0 +1,389 @@
+/* AUTO-GENERATED FROM frontend/tokens (primitives, semantic, components) — DO NOT EDIT MANUALLY */
+/* Run `npm run tokens:build` in frontend/ to regenerate. */
+@font-face {
+  font-family: 'Extenda 30 Deca';
+  src: url('/fonts/Extenda-30-Deca.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  /* Primitive Colors (Tier 1) */
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-50: #F8F7FA;
+  --color-neutral-100: #F1F0F4;
+  --color-neutral-200: #E4E2E8;
+  --color-neutral-300: #D1CFD7;
+  --color-neutral-400: #A3A0A8;
+  --color-neutral-500: #6E6B73;
+  --color-neutral-600: #57545A;
+  --color-neutral-700: #403E42;
+  --color-neutral-800: #333133;
+  --color-neutral-900: #292727;
+  --color-neutral-950: #1A191B;
+  --color-neutral-1000: #000000;
+  --color-teal-100: #D9F2ED;
+  --color-teal-300: #4FD1BD;
+  --color-teal-400: #22B39B;
+  --color-teal-500: #0E7C6B;
+  --color-teal-700: #095A4E;
+  --color-teal-900: #0E352F;
+  --color-amber-100: #FDF1DC;
+  --color-amber-300: #F5C469;
+  --color-amber-500: #E8A33D;
+  --color-amber-600: #CF8A23;
+  --color-amber-700: #965C0C;
+  --color-amber-900: #3D2B0D;
+  --color-green-100: #DCFCE7;
+  --color-green-300: #4ADE80;
+  --color-green-500: #16A34A;
+  --color-green-700: #146C34;
+  --color-green-900: #123522;
+  --color-red-100: #FEE2E2;
+  --color-red-300: #F87171;
+  --color-red-500: #DC2626;
+  --color-red-700: #B91C1C;
+  --color-red-900: #3B1518;
+  --color-blue-100: #E0F2FE;
+  --color-blue-300: #38BDF8;
+  --color-blue-500: #0284C7;
+  --color-blue-700: #0369A1;
+  --color-blue-900: #0F2D42;
+
+  /* Primitive Typography (Tier 1) */
+  --font-display: 'Extenda 30 Deca', Impact, sans-serif;
+  --font-serif: 'Times New Roman', Times, Georgia, serif;
+  --font-sans: 'Arial', Helvetica, system-ui, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 48px;
+  --font-size-5xl: 64px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --line-height-none: 100%;
+  --line-height-tight: 120%;
+  --line-height-normal: 150%;
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.04em;
+  --letter-spacing-widest: 0.35em;
+
+  /* Primitive Spacings, Radii & Border Widths (Tier 1) */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 12px;
+  --radius-full: 9999px;
+  --border-width-0: 0px;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+
+  /* Primitive Breakpoints (Tier 1) */
+  --breakpoint-mobile: 0px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1280px;
+
+  /* Semantic Colors (Tier 2 — Light & Dark Overrides) */
+  --brand-primary: var(--color-teal-500);
+  --brand-primary-hover: var(--color-teal-700);
+  --brand-primary-subtle: var(--color-teal-100);
+  --brand-accent: var(--color-amber-500);
+  --brand-accent-hover: var(--color-amber-600);
+  --brand-accent-subtle: var(--color-amber-100);
+  --surface-canvas: var(--color-neutral-50);
+  --surface-default: var(--color-neutral-0);
+  --surface-muted: var(--color-neutral-100);
+  --surface-inverse: var(--color-neutral-900);
+  --text-primary: var(--color-neutral-900);
+  --text-body: var(--color-neutral-700);
+  --text-muted: var(--color-neutral-500);
+  --text-inverse: var(--color-neutral-0);
+  --text-on-brand: var(--color-neutral-0);
+  --text-on-accent: var(--color-neutral-900);
+  --text-brand: var(--color-teal-700);
+  --border-subtle: var(--color-neutral-200);
+  --border-default: var(--color-neutral-300);
+  --border-focus: var(--color-teal-500);
+  --status-success-bg: var(--color-green-100);
+  --status-success-fg: var(--color-green-700);
+  --status-danger-bg: var(--color-red-100);
+  --status-danger-fg: var(--color-red-700);
+  --status-info-bg: var(--color-blue-100);
+  --status-info-fg: var(--color-blue-700);
+  --status-warning-bg: var(--color-amber-100);
+  --status-warning-fg: var(--color-amber-700);
+
+  /* Semantic Spacings — Proximity & Layout (Tier 2) */
+  --space-proximity-inline: var(--space-2);
+  --space-proximity-eyebrow-to-title: var(--space-2);
+  --space-proximity-title-to-subtitle: var(--space-3);
+  --space-proximity-stack-sm: var(--space-3);
+  --space-proximity-stack-md: var(--space-4);
+  --space-proximity-visual-to-copy: var(--space-6);
+  --space-proximity-copy-to-action: var(--space-8);
+  --space-layout-page-x: var(--space-6);
+  --space-layout-section-gap: var(--space-8);
+  --space-layout-card-padding: var(--space-6);
+  --space-layout-grid-gap: var(--space-4);
+
+  /* Component Tokens (Tier 3) */
+  --comp-button-primary-bg: var(--brand-primary);
+  --comp-button-primary-bg-hover: var(--brand-primary-hover);
+  --comp-button-primary-fg: var(--text-on-brand);
+  --comp-button-accent-bg: var(--brand-accent);
+  --comp-button-accent-bg-hover: var(--brand-accent-hover);
+  --comp-button-accent-fg: var(--text-on-accent);
+  --comp-button-outline-bg: var(--surface-default);
+  --comp-button-outline-fg: var(--text-primary);
+  --comp-button-outline-border: var(--border-default);
+  --comp-button-danger-bg: var(--status-danger-bg);
+  --comp-button-danger-fg: var(--status-danger-fg);
+  --comp-button-radius: var(--radius-md);
+  --comp-button-padding-x: var(--space-4);
+  --comp-button-padding-y: var(--space-3);
+  --comp-button-focus-ring: var(--border-focus);
+  --comp-badge-success-bg: var(--status-success-bg);
+  --comp-badge-success-fg: var(--status-success-fg);
+  --comp-badge-warning-bg: var(--status-warning-bg);
+  --comp-badge-warning-fg: var(--status-warning-fg);
+  --comp-badge-danger-bg: var(--status-danger-bg);
+  --comp-badge-danger-fg: var(--status-danger-fg);
+  --comp-badge-info-bg: var(--status-info-bg);
+  --comp-badge-info-fg: var(--status-info-fg);
+  --comp-badge-brand-bg: var(--brand-primary-subtle);
+  --comp-badge-brand-fg: var(--text-brand);
+  --comp-badge-radius: var(--radius-sm);
+  --comp-input-bg: var(--surface-default);
+  --comp-input-fg: var(--text-primary);
+  --comp-input-placeholder: var(--text-muted);
+  --comp-input-border: var(--border-default);
+  --comp-input-border-focus: var(--border-focus);
+  --comp-input-radius: var(--radius-md);
+  --comp-input-padding-x: var(--space-3);
+  --comp-input-padding-y: var(--space-2);
+  --comp-card-bg: var(--surface-default);
+  --comp-card-bg-subtle: var(--surface-canvas);
+  --comp-card-border: var(--border-subtle);
+  --comp-card-accent-top: var(--brand-accent);
+  --comp-card-accent-primary: var(--brand-primary);
+  --comp-card-radius: var(--radius-md);
+  --comp-card-padding: var(--space-6);
+  --comp-table-header-bg: var(--surface-muted);
+  --comp-table-header-fg: var(--text-primary);
+  --comp-table-row-bg: var(--surface-default);
+  --comp-table-row-hover-bg: var(--surface-canvas);
+  --comp-table-border: var(--border-subtle);
+  --comp-table-radius: var(--radius-sm);
+  --comp-expand-card-bg: var(--surface-default);
+  --comp-expand-card-header-bg: var(--brand-primary-subtle);
+  --comp-expand-card-header-fg: var(--text-primary);
+  --comp-expand-card-header-meta-fg: var(--text-body);
+  --comp-expand-card-border: var(--border-default);
+  --comp-expand-card-divider: var(--border-subtle);
+  --comp-expand-card-accent-subtle: var(--brand-primary-subtle);
+  --comp-expand-card-accent-primary: var(--brand-primary);
+  --comp-expand-card-accent-strong: var(--brand-primary-hover);
+  --comp-expand-card-accent-width: var(--border-width-4);
+  --comp-expand-card-focus-ring: var(--border-focus);
+  --comp-expand-card-radius: var(--radius-md);
+  --comp-expand-card-header-padding-y: var(--space-3);
+  --comp-expand-card-header-padding-x: var(--space-4);
+  --comp-expand-card-body-padding: var(--space-5);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --brand-primary: var(--color-teal-400);
+  --brand-primary-hover: var(--color-teal-300);
+  --brand-primary-subtle: var(--color-teal-900);
+  --brand-accent: var(--color-amber-500);
+  --brand-accent-hover: var(--color-amber-300);
+  --brand-accent-subtle: var(--color-amber-900);
+  --surface-canvas: var(--color-neutral-950);
+  --surface-default: var(--color-neutral-900);
+  --surface-muted: var(--color-neutral-800);
+  --surface-inverse: var(--color-neutral-50);
+  --text-primary: var(--color-neutral-50);
+  --text-body: var(--color-neutral-300);
+  --text-muted: var(--color-neutral-400);
+  --text-inverse: var(--color-neutral-900);
+  --text-on-brand: var(--color-neutral-950);
+  --text-on-accent: var(--color-neutral-950);
+  --text-brand: var(--color-teal-300);
+  --border-subtle: var(--color-neutral-800);
+  --border-default: var(--color-neutral-700);
+  --border-focus: var(--color-teal-300);
+  --status-success-bg: var(--color-green-900);
+  --status-success-fg: var(--color-green-300);
+  --status-danger-bg: var(--color-red-900);
+  --status-danger-fg: var(--color-red-300);
+  --status-info-bg: var(--color-blue-900);
+  --status-info-fg: var(--color-blue-300);
+  --status-warning-bg: var(--color-amber-900);
+  --status-warning-fg: var(--color-amber-300);
+}
+
+.type-display-brand {
+  font-family: var(--font-display);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.type-display-hero {
+  font-family: var(--font-display);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.type-display-tagline {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-widest);
+}
+
+.type-heading-h1 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.type-heading-h2 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.type-heading-h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.type-heading-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.type-body-lg {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.type-body-base {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.type-body-sm {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.type-label-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.type-label-base {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.type-label-caption {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+@media (max-width: 767px) {
+  :root {
+    --space-proximity-visual-to-copy: var(--space-5);
+    --space-proximity-copy-to-action: var(--space-6);
+    --space-layout-page-x: var(--space-4);
+    --space-layout-section-gap: var(--space-6);
+    --space-layout-card-padding: var(--space-4);
+    --space-layout-grid-gap: var(--space-3);
+  }
+
+  .type-display-brand {
+    font-size: var(--font-size-3xl);
+  }
+
+  .type-display-hero {
+    font-size: var(--font-size-2xl);
+  }
+
+  .type-heading-h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .type-heading-h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .type-heading-h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .type-heading-subtitle {
+    font-size: var(--font-size-sm);
+  }
+
+  .type-body-lg {
+    font-size: var(--font-size-base);
+  }
+
+}

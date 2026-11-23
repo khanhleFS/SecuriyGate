@@ -1,0 +1,15 @@
+{
+  "badge": {
+    "success-bg": { "value": "{status.success-bg}", "type": "color", "description": "Nền nhãn trạng thái cho phép / hoạt động" },
+    "success-fg": { "value": "{status.success-fg}", "type": "color", "description": "Chữ nhãn trạng thái cho phép / hoạt động" },
+    "warning-bg": { "value": "{status.warning-bg}", "type": "color", "description": "Nền nhãn trạng thái chờ duyệt / cảnh báo nhẹ" },
+    "warning-fg": { "value": "{status.warning-fg}", "type": "color", "description": "Chữ nhãn trạng thái chờ duyệt / cảnh báo nhẹ" },
+    "danger-bg": { "value": "{status.danger-bg}", "type": "color", "description": "Nền nhãn trạng thái từ chối / lỗi" },
+    "danger-fg": { "value": "{status.danger-fg}", "type": "color", "description": "Chữ nhãn trạng thái từ chối / lỗi" },
+    "info-bg": { "value": "{status.info-bg}", "type": "color", "description": "Nền nhãn trạng thái khách / thông tin" },
+    "info-fg": { "value": "{status.info-fg}", "type": "color", "description": "Chữ nhãn trạng thái khách / thông tin" },
+    "brand-bg": { "value": "{brand.primary-subtle}", "type": "color", "description": "Nền nhãn thương hiệu nhẹ" },
+    "brand-fg": { "value": "{text.brand}", "type": "color", "description": "Chữ nhãn thương hiệu" },
+    "radius": { "value": "{borderRadius.sm}", "type": "borderRadius", "description": "Bo góc sắc cạnh cho nhãn trạng thái" }
+  }
+}

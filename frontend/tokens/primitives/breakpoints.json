@@ -1,0 +1,8 @@
+{
+    "breakpoint": {
+        "mobile": { "value": "0px", "type": "breakpoint", "description": "Màn hình điện thoại (< 768px)" },
+        "tablet": { "value": "768px", "type": "breakpoint", "description": "Màn hình máy tính bảng (768px – 1023px)" },
+        "desktop": { "value": "1024px", "type": "breakpoint", "description": "Màn hình máy tính để bàn (>= 1024px, ngưỡng mở DesktopOnlyGate)" },
+        "wide": { "value": "1280px", "type": "breakpoint", "description": "Độ rộng khung chứa rộng tối đa" }
+    }
+}

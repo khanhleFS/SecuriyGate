@@ -1,0 +1,67 @@
+{
+    "proximity": {
+        "inline": {
+            "value": "{space.2}",
+            "type": "space",
+            "description": "Khoảng cách ngang giữa icon và chữ hoặc các nút/pill cạnh nhau trong cùng một cụm"
+        },
+        "eyebrow-to-title": {
+            "value": "{space.2}",
+            "type": "space",
+            "description": "Khoảng cách rất gần giữa nhãn eyebrow/badge trạng thái và tiêu đề ngay bên dưới"
+        },
+        "title-to-subtitle": {
+            "value": "{space.3}",
+            "type": "space",
+            "description": "Khoảng cách gần giữa tiêu đề chính (h1/h2) và phụ đề/đoạn mô tả đi kèm"
+        },
+        "stack-sm": {
+            "value": "{space.3}",
+            "type": "space",
+            "description": "Khoảng cách dọc chặt giữa các thành phần con liên quan trực tiếp trong một thẻ"
+        },
+        "stack-md": {
+            "value": "{space.4}",
+            "type": "space",
+            "description": "Khoảng cách trung bình giữa các nhóm nội dung trong cùng một khối/panel"
+        },
+        "visual-to-copy": {
+            "value": "{space.6}",
+            "mobile": "{space.5}",
+            "type": "space",
+            "description": "Khoảng cách phân nhóm vừa giữa hình minh họa/media và cụm tiêu đề + mô tả"
+        },
+        "copy-to-action": {
+            "value": "{space.8}",
+            "mobile": "{space.6}",
+            "type": "space",
+            "description": "Khoảng cách tách rõ giữa khối nội dung chữ và cụm nút hành động chính (CTA)"
+        }
+    },
+    "layout": {
+        "page-x": {
+            "value": "{space.6}",
+            "mobile": "{space.4}",
+            "type": "space",
+            "description": "Khoảng đệm lề ngang hai bên của khung chứa toàn trang"
+        },
+        "section-gap": {
+            "value": "{space.8}",
+            "mobile": "{space.6}",
+            "type": "space",
+            "description": "Khoảng cách tách biệt giữa các vùng/section độc lập trên cùng trang"
+        },
+        "card-padding": {
+            "value": "{space.6}",
+            "mobile": "{space.4}",
+            "type": "space",
+            "description": "Khoảng đệm bên trong các khối card/panel chuẩn"
+        },
+        "grid-gap": {
+            "value": "{space.4}",
+            "mobile": "{space.3}",
+            "type": "space",
+            "description": "Khoảng cách giữa các ô trong lưới KPI, lưới thẻ token hoặc danh sách card"
+        }
+    }
+}

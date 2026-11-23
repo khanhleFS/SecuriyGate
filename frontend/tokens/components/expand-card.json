@@ -1,0 +1,19 @@
+{
+  "expand-card": {
+    "bg": { "value": "{surface.default}", "type": "color", "description": "Nền khung tổng thể và phần nội dung khi mở rộng của Expand Card" },
+    "header-bg": { "value": "{brand.primary-subtle}", "type": "color", "description": "Nền thanh tiêu đề nhấn nhẹ (teal-100) của Expand Card" },
+    "header-fg": { "value": "{text.primary}", "type": "color", "description": "Màu tiêu đề chính và icon mũi tên đóng/mở" },
+    "header-meta-fg": { "value": "{text.body}", "type": "color", "description": "Màu đường dẫn gợi ý và số lượng mục trên thanh tiêu đề" },
+    "border": { "value": "{border.default}", "type": "color", "description": "Viền ngoài bao quanh toàn bộ Expand Card" },
+    "divider": { "value": "{border.subtle}", "type": "color", "description": "Đường phân cách giữa thanh tiêu đề và phần nội dung mở rộng" },
+    "accent-subtle": { "value": "{brand.primary-subtle}", "type": "color", "description": "Thanh nhấn trái và badge cấp độ nhẹ (tone teal-100 — Primitives)" },
+    "accent-primary": { "value": "{brand.primary}", "type": "color", "description": "Thanh nhấn trái và badge cấp độ trung bình (tone teal-500 — Semantic)" },
+    "accent-strong": { "value": "{brand.primary-hover}", "type": "color", "description": "Thanh nhấn trái và badge cấp độ đậm (tone teal-700 — Components)" },
+    "accent-width": { "value": "{borderWidth.4}", "type": "borderWidth", "description": "Độ dày thanh nhấn dọc bên trái Expand Card" },
+    "focus-ring": { "value": "{border.focus}", "type": "color", "description": "Viền focus truy cập bàn phím cho nút đóng/mở Expand Card" },
+    "radius": { "value": "{borderRadius.md}", "type": "borderRadius", "description": "Bo góc chuẩn của Expand Card" },
+    "header-padding-y": { "value": "{space.3}", "type": "space", "description": "Khoảng đệm dọc bên trong thanh tiêu đề Expand Card" },
+    "header-padding-x": { "value": "{space.4}", "type": "space", "description": "Khoảng đệm ngang bên trong thanh tiêu đề Expand Card" },
+    "body-padding": { "value": "{space.5}", "type": "space", "description": "Khoảng đệm nội dung bên trong phần thân khi mở rộng" }
+  }
+}

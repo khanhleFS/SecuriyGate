@@ -1,0 +1,19 @@
+{
+  "button": {
+    "primary-bg": { "value": "{brand.primary}", "type": "color", "description": "Nền nút hành động chính (Ví dụ: Mở barie)" },
+    "primary-bg-hover": { "value": "{brand.primary-hover}", "type": "color", "description": "Nền nút chính khi di chuột hoặc nhấn giữ" },
+    "primary-fg": { "value": "{text.on-brand}", "type": "color", "description": "Chữ và icon trên nút chính" },
+    "accent-bg": { "value": "{brand.accent}", "type": "color", "description": "Nền nút nhấn phụ (Ví dụ: Chế độ kiểm tra)" },
+    "accent-bg-hover": { "value": "{brand.accent-hover}", "type": "color", "description": "Nền nút nhấn phụ khi di chuột" },
+    "accent-fg": { "value": "{text.on-accent}", "type": "color", "description": "Chữ và icon trên nút nhấn phụ" },
+    "outline-bg": { "value": "{surface.default}", "type": "color", "description": "Nền nút viền mặc định" },
+    "outline-fg": { "value": "{text.primary}", "type": "color", "description": "Chữ trên nút viền mặc định" },
+    "outline-border": { "value": "{border.default}", "type": "color", "description": "Viền nút phụ dạng outline" },
+    "danger-bg": { "value": "{status.danger-bg}", "type": "color", "description": "Nền nút cảnh báo / khóa cổng khẩn" },
+    "danger-fg": { "value": "{status.danger-fg}", "type": "color", "description": "Chữ và icon trên nút cảnh báo" },
+    "radius": { "value": "{borderRadius.md}", "type": "borderRadius", "description": "Bo góc chuẩn của nút bấm" },
+    "padding-x": { "value": "{space.4}", "type": "space", "description": "Khoảng đệm ngang bên trong nút" },
+    "padding-y": { "value": "{space.3}", "type": "space", "description": "Khoảng đệm dọc bên trong nút" },
+    "focus-ring": { "value": "{border.focus}", "type": "color", "description": "Viền focus truy cập bàn phím cho nút bấm" }
+  }
+}

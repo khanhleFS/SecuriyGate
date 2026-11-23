@@ -12,7 +12,10 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "tokens:build": "node scripts/build-tokens.mjs",
+    "assets:sync": "node scripts/sync-assets.mjs",
+    "design:sync": "npm run tokens:build && npm run assets:sync"
   },
   "devDependencies": {
     "turbo": "^2.1.2",

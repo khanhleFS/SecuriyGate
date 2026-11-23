@@ -1,0 +1,12 @@
+{
+  "input": {
+    "bg": { "value": "{surface.default}", "type": "color", "description": "Nền ô nhập liệu và select" },
+    "fg": { "value": "{text.primary}", "type": "color", "description": "Chữ nhập trong ô form" },
+    "placeholder": { "value": "{text.muted}", "type": "color", "description": "Chữ gợi ý placeholder khi chưa nhập" },
+    "border": { "value": "{border.default}", "type": "color", "description": "Viền mặc định của ô nhập liệu" },
+    "border-focus": { "value": "{border.focus}", "type": "color", "description": "Viền khi ô nhập liệu đang được focus" },
+    "radius": { "value": "{borderRadius.md}", "type": "borderRadius", "description": "Bo góc ô nhập liệu" },
+    "padding-x": { "value": "{space.3}", "type": "space", "description": "Khoảng đệm ngang trong ô nhập liệu" },
+    "padding-y": { "value": "{space.2}", "type": "space", "description": "Khoảng đệm dọc trong ô nhập liệu" }
+  }
+}

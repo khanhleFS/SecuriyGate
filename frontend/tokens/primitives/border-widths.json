@@ -1,0 +1,8 @@
+{
+    "borderWidth": {
+        "0": { "value": "0px", "type": "borderWidth" },
+        "1": { "value": "1px", "type": "borderWidth" },
+        "2": { "value": "2px", "type": "borderWidth" },
+        "4": { "value": "4px", "type": "borderWidth" }
+    }
+}

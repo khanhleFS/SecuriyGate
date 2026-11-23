@@ -1,0 +1,82 @@
+{
+    "display": {
+        "brand": {
+            "value": { "fontFamily": "{fontFamilies.display}", "fontSize": "{fontSizes.5xl}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.none}", "letterSpacing": "{letterSpacings.wide}" },
+            "mobile": { "fontSize": "{fontSizes.3xl}" },
+            "type": "typography",
+            "description": "Wordmark thương hiệu (THEN-CHOT) hoặc tiêu đề nhận diện siêu hẹp viết in hoa"
+        },
+        "hero": {
+            "value": { "fontFamily": "{fontFamilies.display}", "fontSize": "{fontSizes.4xl}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.none}", "letterSpacing": "{letterSpacings.wide}" },
+            "mobile": { "fontSize": "{fontSizes.2xl}" },
+            "type": "typography",
+            "description": "Tiêu đề lớn nhất trên Hero banner, màn hình mở đầu hoặc bảng hiển thị cổng an ninh"
+        },
+        "tagline": {
+            "value": { "fontFamily": "{fontFamilies.display}", "fontSize": "{fontSizes.xs}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.none}", "letterSpacing": "{letterSpacings.widest}" },
+            "type": "typography",
+            "description": "Khẩu hiệu thương hiệu giãn chữ rộng (ví dụ: THEN CÀI XÓM ẤP đặt trên thanh ngang brand.primary)"
+        }
+    },
+    "heading": {
+        "h1": {
+            "value": { "fontFamily": "{fontFamilies.serif}", "fontSize": "{fontSizes.3xl}", "fontWeight": "{fontWeights.bold}", "lineHeight": "{lineHeights.tight}", "letterSpacing": "{letterSpacings.tight}" },
+            "mobile": { "fontSize": "{fontSizes.2xl}" },
+            "type": "typography",
+            "description": "Tiêu đề chính của trang hoặc màn hình (Page title)"
+        },
+        "h2": {
+            "value": { "fontFamily": "{fontFamilies.serif}", "fontSize": "{fontSizes.2xl}", "fontWeight": "{fontWeights.bold}", "lineHeight": "{lineHeights.tight}", "letterSpacing": "{letterSpacings.tight}" },
+            "mobile": { "fontSize": "{fontSizes.xl}" },
+            "type": "typography",
+            "description": "Tiêu đề phân đoạn lớn trong trang (Section heading)"
+        },
+        "h3": {
+            "value": { "fontFamily": "{fontFamilies.serif}", "fontSize": "{fontSizes.xl}", "fontWeight": "{fontWeights.bold}", "lineHeight": "{lineHeights.normal}", "letterSpacing": "{letterSpacings.normal}" },
+            "mobile": { "fontSize": "{fontSizes.lg}" },
+            "type": "typography",
+            "description": "Tiêu đề nhóm con hoặc tiêu đề thẻ (Card title, Subsection)"
+        },
+        "subtitle": {
+            "value": { "fontFamily": "{fontFamilies.sans}", "fontSize": "{fontSizes.base}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.normal}", "letterSpacing": "{letterSpacings.normal}" },
+            "mobile": { "fontSize": "{fontSizes.sm}" },
+            "type": "typography",
+            "description": "Phụ đề hoặc mô tả giải thích đi ngay bên dưới tiêu đề (co giãn 16px desktop -> 14px mobile)"
+        }
+    },
+    "body": {
+        "lg": {
+            "value": { "fontFamily": "{fontFamilies.sans}", "fontSize": "{fontSizes.lg}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.normal}", "letterSpacing": "{letterSpacings.normal}" },
+            "mobile": { "fontSize": "{fontSizes.base}" },
+            "type": "typography",
+            "description": "Đoạn mở đầu (Lead paragraph) hoặc nội dung tóm tắt nổi bật"
+        },
+        "base": {
+            "value": { "fontFamily": "{fontFamilies.sans}", "fontSize": "{fontSizes.base}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.normal}", "letterSpacing": "{letterSpacings.normal}" },
+            "type": "typography",
+            "description": "Văn bản đọc mặc định cho nội dung giao diện và mô tả"
+        },
+        "sm": {
+            "value": { "fontFamily": "{fontFamilies.sans}", "fontSize": "{fontSizes.sm}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.normal}", "letterSpacing": "{letterSpacings.normal}" },
+            "type": "typography",
+            "description": "Văn bản nội dung phụ trong card nhỏ, bảng nhật ký ra/vào hoặc mô tả ngắn"
+        }
+    },
+    "label": {
+        "eyebrow": {
+            "value": { "fontFamily": "{fontFamilies.sans}", "fontSize": "{fontSizes.xs}", "fontWeight": "{fontWeights.bold}", "lineHeight": "{lineHeights.none}", "letterSpacing": "{letterSpacings.wide}" },
+            "type": "typography",
+            "description": "Nhãn phân loại hoặc chỉ dẫn nhỏ đặt sát phía trên tiêu đề (eyebrow label)"
+        },
+        "base": {
+            "value": { "fontFamily": "{fontFamilies.sans}", "fontSize": "{fontSizes.sm}", "fontWeight": "{fontWeights.bold}", "lineHeight": "{lineHeights.none}", "letterSpacing": "{letterSpacings.normal}" },
+            "type": "typography",
+            "description": "Chữ trong nút bấm (Button), nhãn form (Input label), tab, badge"
+        },
+        "caption": {
+            "value": { "fontFamily": "{fontFamilies.sans}", "fontSize": "{fontSizes.xs}", "fontWeight": "{fontWeights.regular}", "lineHeight": "{lineHeights.normal}", "letterSpacing": "{letterSpacings.normal}" },
+            "type": "typography",
+            "description": "Chú thích ảnh, thời gian quẹt thẻ, metadata, dòng bản quyền footer"
+        }
+    }
+}
