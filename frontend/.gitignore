@@ -9,11 +9,15 @@ node_modules/
 # Testing
 coverage/
 
-# Next.js build output
+# Next.js & TypeScript build output
 .next/
 out/
 build/
 dist/
+*.tsbuildinfo
+
+# Vercel
+.vercel
 
 # Flutter & Mobile
 apps/mobile/.dart_tool/

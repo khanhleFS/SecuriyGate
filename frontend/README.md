@@ -26,6 +26,7 @@ frontend/
 ├── apps/
 │   ├── web/                  # Ứng dụng Web Quản trị / Giám sát cổng an ninh (Next.js 14)
 │   │   ├── Dockerfile        # Đóng gói standalone container phục vụ triển khai
+│   │   ├── vercel.json       # Cấu hình build/install/ignore monorepo khi deploy Vercel
 │   │   ├── package.json
 │   │   ├── public/           # Static assets phục vụ qua HTTP (/brand, /fonts, /illustrations)
 │   │   └── src/
@@ -83,3 +84,16 @@ npm run build
 npm run lint
 npm run test
 ```
+
+---
+
+## 🚀 Deploy Lên Vercel
+
+Cấu hình monorepo (`framework`, `installCommand`, `buildCommand`, `ignoreCommand`) đã được khai báo sẵn trong `apps/web/vercel.json`.
+
+Trên **Vercel Project Settings**, chỉ cần thiết lập thêm:
+- **Root Directory**: `frontend/apps/web`
+- **Include source files outside the Root Directory in the Build Step**: **Enabled** *(Settings → General → Root Directory)*
+- **Node.js Version**: `22.x` *(hoặc `20.x`)*
+- **Environment Variables**: `NEXT_PUBLIC_API_URL` *(URL backend khi kết nối API)*
+
